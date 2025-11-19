@@ -1,0 +1,84 @@
+/* 1) ล้างค่าพื้นฐานทุก element ตามสไลด์ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2) รูปแบบกล่องพื้นฐานของแต่ละ section (ข้อ 5 ในสไลด์) */
+.section {
+  padding: 40px;
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 20px;
+
+  max-width: 1000px;
+  margin: 10px auto;   /* center horizontally */
+}
+
+
+/* กล่อง feature และ item พื้นฐาน (ใช้กับทุกขนาดจอ) */
+.feature {
+  display: block;
+}
+
+.feature .item {
+  background: white;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 2px dashed #666;
+  font-size: 20px;
+}
+
+/* 3) Mobile: หน้าจอเล็กกว่าเท่ากับ 400px → สีแดง */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: red;
+  }
+}
+
+/* 4) Tablet: 401px - 960px → สีเหลือง + Feature แบบ 2×2 */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+  body {
+    background-color: yellow;
+  }
+
+  /* จัด Feature เป็น 2 คอลัมน์ 2 แถว ตามรูปในสไลด์ */
+  .feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .feature .item {
+    margin: 0;
+  }
+}
+
+/* Desktop: width >= 961px */
+@media only screen and (min-width: 961px) {
+
+  body {
+    background-color: skyblue;
+  }
+
+  /* Center sections and limit width */
+  .section {
+    max-width: 1000px;
+    margin: 10px auto;
+  }
+
+  /* Feature: 4 columns in one row */
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+
+  .feature .item {
+    margin-bottom: 0;
+  }
+
+}
+

@@ -27,7 +27,18 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5 {
+  font-family: "Kanit", "Open Sans", Arial, sans-serif; 
+  font-weight: 600;                                     
+  margin: 0 0 10px 0;                                   
   color: #000;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a {
+  color: #000;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
+  color: #999999;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a {
@@ -279,10 +290,13 @@ textarea.form-control {
  
 }
 
-.btn.btn-outline-white:hover {
-  background: #fff;
-  color: #000;
-  border: 2px solid transparent;
+.btn.btn-outline-white {
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .bg-image, .half .image, .image-bg-fullwidth {
